@@ -1,0 +1,9 @@
+# Se definen las instrucciones para indicar al servidor Apache como tratar las peticiones HTTP
+# Todas las peticiones serán procesadas por el archivo index.php, el cual tendrá un parámetro
+# llamado uri el cual será un string que se deberá componer de controlador/metodo/parametro
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^(.+)$ index.php?uri=$1 [QSA,L]
+</IfModule>
