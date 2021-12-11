@@ -21,7 +21,7 @@ date_default_timezone_set('America/Matamoros');
 define('LANG', 'es');
 
 // Se define la url base
-define('URL', IS_LOCAL ? $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/ProyectoTerminal/' : $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/');
+define('URL', $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']);
 
 // Se definen las rutas de directorios a nivel de disco duro del servidor
 define('DS',DIRECTORY_SEPARATOR);
@@ -37,7 +37,7 @@ define('CLASSES', APP.'classes'.DS);
 define('CONFIG', APP.'config'.DS);
 
 // Carpeta 'controllers'
-define('CONTROLLER', APP.'controllers'.DS);
+define('CONTROLLERS', APP.'controllers'.DS);
 
 // CARPETA 'functions'
 define('FUNCTIONS', APP.'functions'.DS);
@@ -93,3 +93,8 @@ define('DB_NAME', 'dish_matamoros');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_CHARSET', 'utf8');
+
+// Se definen el controlador y el método por defecto
+define('DEFAULT_CONTROLLER', 'Home');
+define('DEFAULT_ERROR_CONTROLLER', 'Error');
+define('DEFAULT_METHOD', 'index');
