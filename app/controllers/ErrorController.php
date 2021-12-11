@@ -9,6 +9,6 @@ class ErrorController
 
     public function index()
     {
-        echo 'Se está ejecutando el método index en el ErrorController.';
+    	View::render('404');
     }
 }

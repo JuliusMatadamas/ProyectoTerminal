@@ -144,24 +144,19 @@ class App
         if ( isset($this->uri[0]) )
         {
             // Si se está pasando un controlador, este se asigna a la variable 'current_controller'
-            $current_controller = $this->uri[0];
-            // Después de elimina del array
-            unset($this->uri[0]);
+            $current_controller = ucwords(strtolower($this->uri[0]));
         }
         else
         {
-            // Si no se está pasando un controlador, se asigna a la variable 'current_controller' el controlador por defecto 'HomeController'
+            // Si no se está pasando un controlador, se asigna a la variable 'current_controller' el controlador por defecto 'Home'
             $current_controller = DEFAULT_CONTROLLER;
         }
 
-        // Se convierte la primer letra en mayúcula y se concatena la palabra 'Controller'
-        $controller = ucwords($current_controller).'Controller';
-
         // Se verifica que exista la clase con el nombre del controlador
-        if ( !class_exists($controller))
+        if ( !class_exists($current_controller.'Controller'))
         {
-            // Si no se encontró ninguna clase con el nombre del controlador, se asigna a la variable 'controller' el controlador de errores por defecto
-            $controller = DEFAULT_ERROR_CONTROLLER.'Controller'; // ErrorController
+            // Si no se encontró ninguna clase con el nombre del controlador, se asigna a la variable 'current_controller' el controlador de errores por defecto
+            $current_controller = DEFAULT_ERROR_CONTROLLER; // Error
         }
 
         // Se valida si se está pasando un método a ejecutar en la URI
@@ -171,10 +166,10 @@ class App
             $method = str_replace('-', '_', $this->uri[1]);
 
             // Se valida si existe el método dentro de la clase a ejecutar
-            if ( !method_exists($controller, $method) )
+            if ( !method_exists($current_controller.'Controller', $method) )
             {
-                // Si no existe el método, se asigna a la variable 'controller' el controlador de errores por defecto
-                $controller = DEFAULT_ERROR_CONTROLLER.'Controller';
+                // Si no existe el método, se asigna a la variable 'current_controller' el controlador de errores por defecto
+                $current_controller = DEFAULT_ERROR_CONTROLLER; // Error
                 // Luego se define el método por defecto 'index' en la variable 'current_method'
                 $current_method = DEFAULT_METHOD;
             }
@@ -183,9 +178,6 @@ class App
                 // Si existe el método, se asigna a la variable 'current_method'
                 $current_method = $method;
             }
-
-            // Se elimina del array
-            unset($this->uri[1]);
         }
         else
         {
@@ -194,11 +186,12 @@ class App
         }
 
         // Se crean nuevas constantes para usarse posteriormente en el sistema
-        define('CONTROLLER', strtolower($current_controller));
+        define('CONTROLLER', ucwords(strtolower($current_controller)));
         define('METHOD', $current_method);
 
         // Se crea una nueva instancia del controlador
-        $controller = new $controller;
+        $current_controller = ucwords(strtolower($current_controller)).'Controller';
+        $controller = new $current_controller;
 
         // Se obtienen los parámetros
         $params = array_values(empty($this->uri) ? [] : $this->uri);
