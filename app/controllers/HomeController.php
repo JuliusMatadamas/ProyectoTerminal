@@ -9,6 +9,7 @@ class HomeController
 
     public function index()
     {
-        echo 'Se está ejecutando el método index en el HomeController.';
+    	$data = [];
+        View::render('home', $data);
     }
 }
