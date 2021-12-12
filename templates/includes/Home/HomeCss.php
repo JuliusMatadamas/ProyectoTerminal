@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="<?php echo CSS; ?>/home/home.css">

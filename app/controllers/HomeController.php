@@ -9,7 +9,6 @@ class HomeController
 
     public function index()
     {
-    	$data = [];
-        View::render('home', $data);
+    	View::render('home');
     }
 }

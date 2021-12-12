@@ -10,8 +10,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<!-- Link's -->
-	<link rel="icon" href="<?php echo FAVICON; ?>favicon.ico">
-	<link rel="stylesheet" href="<?php echo CSS; ?>main.css">
+	<link rel="icon" href="<?php echo FAVICON; ?>/favicon.ico">
+	<link rel="stylesheet" href="<?php echo CSS; ?>/main.css">
+    <?php require INCLUDES.CONTROLLER.DS.CONTROLLER.'Css.php'; ?><!-- ./Link's -->
 </head>
 <body>
 	<!-- Contenido de la aplicación -->

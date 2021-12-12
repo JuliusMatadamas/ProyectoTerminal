@@ -49,10 +49,10 @@ define('MODELS', APP.'models'.DS);
 define('ASSETS', URL.'assets/');
 
 // Carpeta 'css'
-define('CSS', ASSETS.'css'.DS);
+define('CSS', ASSETS.'css');
 
 // CARPETA 'favicon'
-define('FAVICON', ASSETS.'favicon'.DS);
+define('FAVICON', ASSETS.'favicon');
 
 // CARPETA 'fonts'
 define('FONTS', ASSETS.'fonts'.DS);
@@ -61,10 +61,10 @@ define('FONTS', ASSETS.'fonts'.DS);
 define('IMAGES', ASSETS.'images'.DS);
 
 // CARPETA 'js'
-define('JS', ASSETS.'js'.DS);
+define('JS', ASSETS.'js');
 
 // CARPETA 'uploads'
-define('UPLOADS', ASSETS.'uploads'.DS);
+define('UPLOADS', ASSETS.'uploads');
 
 // CARPETA 'templates'
 define('TEMPLATES', ROOT.'templates'.DS);
