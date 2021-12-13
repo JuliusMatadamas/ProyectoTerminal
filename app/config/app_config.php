@@ -21,7 +21,7 @@ date_default_timezone_set('America/Matamoros');
 define('LANG', 'es');
 
 // Se define la url base
-define('URL', $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']);
+define('URL', $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/');
 
 // Se definen las rutas de directorios a nivel de disco duro del servidor
 define('DS',DIRECTORY_SEPARATOR);

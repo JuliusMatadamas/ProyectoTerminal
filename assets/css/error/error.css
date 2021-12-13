@@ -1,0 +1,16 @@
+.error__container {
+	color: var(--main-color);
+}
+
+.error__container a {
+	border: solid 1px gray;
+	display: block;
+	overflow: hidden;
+	margin: auto;
+	max-width: 420px;
+}
+
+.error__container a img {
+	height: auto;
+	max-width: 420px;
+}

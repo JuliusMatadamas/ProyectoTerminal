@@ -1,6 +1,6 @@
 @media (max-width: 575px) {
     .container {
-        max-width: none;
+        max-width: 88%;
     }
 
     .col-xs-1 {

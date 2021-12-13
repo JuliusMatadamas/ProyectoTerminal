@@ -1,0 +1,1 @@
+<script src="<?php echo JS; ?>/error/error.js" type="text/javascript"></script>
