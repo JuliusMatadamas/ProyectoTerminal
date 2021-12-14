@@ -1,16 +1,25 @@
-.error__container {
-	color: var(--main-color);
-}
-
 .error__container a {
-	border: solid 1px gray;
 	display: block;
-	overflow: hidden;
-	margin: auto;
-	max-width: 420px;
+	margin: 0 auto 20px;
+	max-width: 416px;
 }
 
 .error__container a img {
 	height: auto;
-	max-width: 420px;
+	max-width: 416px;
 }
+
+.error__container h1 {
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.error__container h2 {
+	margin-bottom: 20px;
+}
+
+.error__container p {
+	line-height: 1.7;
+	margin-bottom: 20px;
+}
+
