@@ -12,7 +12,7 @@ class Redirect
      *
      * ejemplo de uso, cuando se quirea redirigir al usuario cuando este quiera ingresar a una sección
      * protegida que requiera autenticación y el usuario no lo esté, se debe invocar a la clase de la
-     * siguiente manera: Redirect::to('home');
+     * siguiente manera: Redirect::to('Home');
      *
      */
     public static function to($location)

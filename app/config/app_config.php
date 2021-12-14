@@ -58,7 +58,7 @@ define('FAVICON', ASSETS.'favicon');
 define('FONTS', ASSETS.'fonts'.DS);
 
 // Carpeta 'images'
-define('IMAGES', ASSETS.'images'.DS);
+define('IMAGES', ASSETS.'images');
 
 // CARPETA 'js'
 define('JS', ASSETS.'js');

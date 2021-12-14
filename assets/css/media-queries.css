@@ -1,5 +1,6 @@
 @media (max-width: 575px) {
     .container {
+        margin: auto;
         max-width: 88%;
     }
 

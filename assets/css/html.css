@@ -1,3 +1,8 @@
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
 body {
     height: 100%;
     width: 100%;
@@ -34,4 +39,8 @@ img {
 
 p {
     font-size: 1.1em;
+}
+
+ul {
+    list-style: none;
 }

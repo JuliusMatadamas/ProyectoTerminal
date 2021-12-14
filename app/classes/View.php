@@ -14,7 +14,7 @@ class View
 		// Se comprueba si existe el archivo
 		if (!is_file(VIEWS.CONTROLLER.DS.$view.'View.php')) {
 			// Se manda el mensaje en caso de no haber sido encontrada la vista
-			die(sprintf("La vista %sView no fue encontrada en el directorio.", $view));
+            die(sprintf("La vista %sView no fue encontrada en el directorio.", $view));
 		}
 
 		// Se requiere la vista
