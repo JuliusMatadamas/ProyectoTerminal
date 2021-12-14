@@ -57,6 +57,67 @@ header > .container > nav > ul > li > a:hover {
     z-index: 9;
 }
 
+#inicio {
+    background-color: var(--main-color);
+    height: 420px;
+    margin-bottom: 120px;
+    position: relative;
+}
+
+#inicio::after,
+#inicio::before {
+    background: #ffffff;
+    bottom: -80px;
+    content: '';
+    height: 100px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(-3deg);
+    z-index: 1;
+}
+
+#inicio .container {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#inicio .container .inicio-form {
+    justify-self: center;
+    max-width: 430px;
+    width: 100%;
+    z-index: 2;
+}
+
+#inicio .container .inicio-form .card-header {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#inicio .container .inicio-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+#inicio .container .inicio-text {
+    color: #ffffff;
+    justify-self: center;
+}
+
+#inicio .container .inicio-text h1 {
+    line-height: 1.2;
+    margin: 30px 0 20px 0;
+    text-align: center;
+}
+
+#inicio .container .inicio-text p {
+    line-height: 1.5;
+    margin: 0 auto 20px;
+    text-align: justify;
+}
+
+
 #nav-toggle {
     position: absolute;
     top: -100px;
@@ -121,10 +182,30 @@ header > .container > nav > ul > li > a:hover {
         font-size: 1.5em;
     }
 
+    #inicio {
+        height: auto;
+    }
+
+    #inicio .container {
+        grid-template-columns: 1fr;
+    }
+
+    #inicio .container .inicio-text a {
+        display: block;
+        width: 100%;
+    }
+
     .icon-burger {
         display: block;
     }
 
     .line {
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #inicio::after,
+    #inicio::before {
+        bottom: -50px;
     }
 }
