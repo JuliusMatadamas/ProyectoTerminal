@@ -144,17 +144,57 @@ header > .container > nav > ul > li > a:hover {
     display: grid;
     gap: 50px;
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 20px;
+}
+
+.servicios__grid_b {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .servicios__grid_a .card .card-body {
     text-align: center;
 }
+
+.servicios__img {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    height: auto;
+    justify-self: right;
+    overflow: hidden;
+    max-width: 550px;
+    width: 100%;
+}
+
 .servicios__grid_a .card .card-body img {
     margin: auto;
     max-width: 200px;
     width: 100%;
 }
 
+.servicios__text {
+    border: solid 1px #f5f5f5;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 369px;
+    padding: 40px;
+}
+
+.servicios__text h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.servicios__text p {
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/*
+    ===============================================================================================
+    ESTILOS SOBRE MEDIA QUERIES
+    ===============================================================================================
+*/
 @media screen and (max-width: 767px) {
     header > .container > nav :checked ~ ul {
         bottom: 0;
@@ -223,8 +263,48 @@ header > .container > nav > ul > li > a:hover {
 
     .servicios__grid_a .card {
         justify-self: center;
+        margin-bottom: 20px;
         max-width: 300px;
         width: 100%;
+    }
+
+    .servicios__grid_b {
+        grid-template-columns: 1fr;
+    }
+
+    .servicios__img {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+        margin-bottom: 0;
+    }
+
+    .servicios__text {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 0;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .servicios__grid_b {
+        grid-template-columns: 1fr;
+    }
+
+    .servicios__img {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+        justify-self: center;
+        margin-bottom: 0;
+    }
+
+    .servicios__text {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 0;
+        height: auto;
+        justify-self: center;
+        max-width: 550px;
     }
 }
 

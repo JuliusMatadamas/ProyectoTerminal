@@ -125,6 +125,18 @@
                             </div>
                         </div>
                     </div>
+
+                    <br>
+
+                    <div class="row servicios__grid_b">
+                        <div class="servicios__img">
+                            <img src="<?php echo IMAGES; ?>/instalacion.png" alt="Instalamos su equipo">
+                        </div>
+                        <div class="servicios__text">
+                            <h3>Instalamos el mismo día</h3>
+                            <p>Cuando se suscriba a DISH con nosotros, montaremos su antena parabólica e instalaremos su sistema decodificador de señal para su tv o pantalla sin cargo por tiempo limitado. Deje que nosotros lo hagamos todo en una sola visita. El día que se acuerde para la instalción nos comunicaremos con usted minutos antes para asegurar su presencia.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
