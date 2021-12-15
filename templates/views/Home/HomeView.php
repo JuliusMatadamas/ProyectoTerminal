@@ -141,8 +141,184 @@
             </section>
 
             <section id="paquetes">
-                <h1>Paquetes</h1>
-                <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi autem, facilis fuga illum nesciunt tempora! Alias dignissimos, eaque eum eveniet hic labore laborum magni odio quae quibusdam, quo repellendus sit.</span><span>Cum dolorem doloribus earum incidunt ipsum, laboriosam, libero molestias nisi porro provident repellat sequi vel voluptas. Ab aliquid amet inventore iure maxime minus odio, placeat quaerat repellat sed voluptatibus voluptatum.</span><span>Ab blanditiis cum dignissimos eos esse excepturi ipsam molestias numquam, placeat, quis quos ut veniam. Ad commodi dicta earum esse, facere fugit harum illum magni maiores odio officiis, unde veniam?</span><span>Adipisci deserunt dolorem doloribus provident quia tempora tenetur. Accusamus aliquid, aperiam autem cum dignissimos eaque ex illum libero magnam maxime molestias nemo nulla pariatur, placeat provident, quis tempora vel voluptatibus.</span><span>Ab aliquam, amet cum distinctio dolor dolores eaque eveniet facere facilis fuga illo incidunt itaque iure libero magnam minus non odio, quaerat quibusdam recusandae repudiandae, totam ullam vitae voluptates voluptatibus.</span></p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h4 class="text-center">AHORA CON TUS PLATAFORMAS FAVORITAS <span>¡A UN PRECIO INCREÍBLE!</span></h4>
+                        </div>
+                    </div>
+
+                    <div class="row paquetes__grid_a">
+                        <div class="paquetes__grid_a-1">
+                            <img src="<?php echo IMAGES; ?>/netflix_logo.png" alt="Netflix">
+                            <div class="paquetes__grid_a-2">
+                                <!--
+                                    Paquete Netflix - Dish Junior
+                                -->
+                                <div class="card shadow">
+                                    <img src="<?php echo IMAGES; ?>/netflix_logo.png">
+
+                                    <p class="paquetes__p1">1 PANTALLA SD</p>
+
+                                    <div class="paquetes__d1">
+                                        <div class="paquetes__p-junior">
+                                            <div>DISH JUNIOR</div>
+                                        </div>
+                                        <p class="paquetes__p2">$277 DOMICILIADO</p>
+                                        <div class="paquetes__d1-g1">
+                                            <div>
+                                                <p class="paquetes__p3">Por solo</p>
+                                                <p class="paquetes__p4">$</p>
+                                            </div>
+                                            <div>
+                                                <p class="paquetes__p5">287</p>
+                                            </div>
+                                            <div>
+                                                <p class="paquetes__p6">al mes</p>
+                                                <p class="paquetes__p7">EFECTIVO</p>
+                                            </div>
+                                        </div>
+                                        <p class="paquetes__p8">INCLUYE</p>
+                                        <div class="paquetes__d1-g2">
+                                            <div class="paquetes__d1-g2-d1">
+                                                <p class="paquetes__p9">HASTA</p>
+                                                <P class="paquetes__p10">41 CANALES</P>
+                                                <P class="paquetes__p10">&nbsp;</P>
+                                            </div>
+                                            <div>
+                                                <p class="paquetes__p9">&nbsp;</p>
+                                                <p class="paquetes__p10">10 AUDIO</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--
+                                    Paquete Netflix - Dish Básico
+                                -->
+                                <div class="card shadow">
+                                    <img src="<?php echo IMAGES; ?>/netflix_logo.png">
+
+                                    <p class="paquetes__p1">2 PANTALLAS HD</p>
+
+                                    <div class="paquetes__d1">
+                                        <div class="paquetes__p-basico">
+                                            <div>DISH BÁSICO</div>
+                                        </div>
+                                        <p class="paquetes__p2">&nbsp;</p>
+                                        <div class="paquetes__d1-g1">
+                                            <div>
+                                                <p class="paquetes__p3">Por solo</p>
+                                                <p class="paquetes__p4">$</p>
+                                            </div>
+                                            <div>
+                                                <p class="paquetes__p5">394</p>
+                                            </div>
+                                            <div>
+                                                <p class="paquetes__p6">al mes</p>
+                                                <p class="paquetes__p7">&nbsp;</p>
+                                            </div>
+                                        </div>
+                                        <p class="paquetes__p8">INCLUYE</p>
+                                        <div class="paquetes__d1-g2">
+                                            <div class="paquetes__d1-g2-d1">
+                                                <p class="paquetes__p9">HASTA</p>
+                                                <P class="paquetes__p10">74 CANALES</P>
+                                                <P class="paquetes__p10">10 AUDIO</P>
+                                            </div>
+                                            <div>
+                                                <img src="<?php echo IMAGES; ?>/dishmovil.png" alt="Dish Móvil">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paquetes__grid_a-1">
+                            <img src="<?php echo IMAGES; ?>/amazon_prime_logo.png" alt="Amazon Prime">
+                            <div class="paquetes__grid_a-2">
+                                <!--
+                                    Paquete Amazon Prime - Dish Básico
+                                -->
+                                <div class="card shadow">
+                                    <img src="<?php echo IMAGES; ?>/amazon_prime_logo.png">
+
+                                    <p class="paquetes__p1">MEMBRESÍA</p>
+
+                                    <div class="paquetes__d1">
+                                        <div class="paquetes__p-junior">
+                                            <div>DISH JUNIOR</div>
+                                        </div>
+                                        <p class="paquetes__p2">$235 DOMICILIADO</p>
+                                        <div class="paquetes__d1-g1">
+                                            <div>
+                                                <p class="paquetes__p3">Por solo</p>
+                                                <p class="paquetes__p4">$</p>
+                                            </div>
+                                            <div>
+                                                <p class="paquetes__p5">245</p>
+                                            </div>
+                                            <div>
+                                                <p class="paquetes__p6">al mes</p>
+                                                <p class="paquetes__p7">&nbsp;</p>
+                                            </div>
+                                        </div>
+                                        <p class="paquetes__p8">INCLUYE</p>
+                                        <div class="paquetes__d1-g2">
+                                            <div class="paquetes__d1-g2-d1">
+                                                <p class="paquetes__p9">HASTA</p>
+                                                <P class="paquetes__p10">41 CANALES</P>
+                                                <P class="paquetes__p10">&nbsp;</P>
+                                            </div>
+                                            <div>
+                                                <p class="paquetes__p9">&nbsp;</p>
+                                                <p class="paquetes__p10">10 AUDIO</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--
+                                    Paquete Amazon Prime - Dish Básico
+                                -->
+                                <div class="card shadow">
+                                    <img src="<?php echo IMAGES; ?>/amazon_prime_logo.png">
+
+                                    <p class="paquetes__p1">MEMBRESÍA</p>
+
+                                    <div class="paquetes__d1">
+                                        <div class="paquetes__p-basico">
+                                            <div>DISH BÁSICO</div>
+                                        </div>
+                                        <p class="paquetes__p2">&nbsp;</p>
+                                        <div class="paquetes__d1-g1">
+                                            <div>
+                                                <p class="paquetes__p3">Por solo</p>
+                                                <p class="paquetes__p4">$</p>
+                                            </div>
+                                            <div>
+                                                <p class="paquetes__p5">286</p>
+                                            </div>
+                                            <div>
+                                                <p class="paquetes__p6">al mes</p>
+                                                <p class="paquetes__p7">&nbsp;</p>
+                                            </div>
+                                        </div>
+                                        <p class="paquetes__p8">INCLUYE</p>
+                                        <div class="paquetes__d1-g2">
+                                            <div class="paquetes__d1-g2-d1">
+                                                <p class="paquetes__p9">HASTA</p>
+                                                <P class="paquetes__p10">74 CANALES</P>
+                                                <P class="paquetes__p10">10 AUDIO</P>
+                                            </div>
+                                            <div>
+                                                <img src="<?php echo IMAGES; ?>/dishmovil.png" alt="Dish Móvil">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <hr>
