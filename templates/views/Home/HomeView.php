@@ -91,7 +91,42 @@
                 </div>
             </section>
 
-            <hr>
+            <section id="servicios">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="text-center">Somos un distribuidor autorizado para vender e instalar cualquiera de los</p>
+                            <h2 class="text-center">Servicios que Dish tiene para ti</h2>
+                        </div>
+                    </div>
+
+                    <div class="row servicios__grid_a">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <h3>Televisión</h3>
+                                <h4>Satelital</h4>
+                                <img src="<?php echo IMAGES; ?>/dish_logo.png" alt="Dish Tv">
+                            </div>
+                        </div>
+
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <h3>Internet</h3>
+                                <h4>Inalámbrico</h4>
+                                <img src="<?php echo IMAGES; ?>/ON_logo.png" alt="Dish Tv">
+                            </div>
+                        </div>
+
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <h3>Telefonía</h3>
+                                <h4>Celular</h4>
+                                <img src="<?php echo IMAGES; ?>/FreedomPOP_logo.png" alt="Dish Tv">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section id="paquetes">
                 <h1>Paquetes</h1>

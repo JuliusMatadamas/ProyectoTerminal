@@ -140,6 +140,21 @@ header > .container > nav > ul > li > a:hover {
     width: 30px;
 }
 
+.servicios__grid_a {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.servicios__grid_a .card .card-body {
+    text-align: center;
+}
+.servicios__grid_a .card .card-body img {
+    margin: auto;
+    max-width: 200px;
+    width: 100%;
+}
+
 @media screen and (max-width: 767px) {
     header > .container > nav :checked ~ ul {
         bottom: 0;
@@ -200,6 +215,16 @@ header > .container > nav > ul > li > a:hover {
     }
 
     .line {
+    }
+
+    .servicios__grid_a {
+        grid-template-columns: 1fr;
+    }
+
+    .servicios__grid_a .card {
+        justify-self: center;
+        max-width: 300px;
+        width: 100%;
     }
 }
 
