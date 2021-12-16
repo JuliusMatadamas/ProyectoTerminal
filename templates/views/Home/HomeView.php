@@ -318,6 +318,82 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="row paquetes__grid_b">
+                        <div>
+                            <div>
+                                <div>
+                                    <img src="<?php echo IMAGES; ?>/netflix_logo.png">
+                                </div>
+                                <div>
+                                    2 PANTALLA HD
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <img src="<?php echo IMAGES; ?>/amazon_prime_logo.png">
+                                </div>
+                                <div>
+                                    MEMBRESÍA
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+                                        Por solo
+                                    </div>
+                                    <div>
+                                        $
+                                    </div>
+                                </div>
+
+                                <div>
+                                    465
+                                </div>
+
+                                <div>
+                                    al mes
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <div>
+                                        DISH BÁSICO
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div>
+                                        <div>
+                                            INCLUYE
+                                        </div>
+
+                                        <div>
+                                            HASTA
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            74 CANALES
+                                        </div>
+
+                                        <div>
+                                            10 AUDIO
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <img src="<?php echo IMAGES; ?>/dishmovil.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
