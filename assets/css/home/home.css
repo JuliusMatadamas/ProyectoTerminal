@@ -521,6 +521,25 @@ header > .container > nav > ul > li > a:hover {
     width: 100%;
 }
 
+.paquetes_grid_d {
+    border: solid 1px #f5f5f5;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-gap: 10px;
+    padding: 20px;
+}
+.paquetes_grid_d > div {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    padding: 5px;
+    justify-self: center;
+    text-align: center;
+    width: 100px;
+}
 
 .paquetes__p1 {
     color: red;
@@ -687,6 +706,15 @@ header > .container > nav > ul > li > a:hover {
     .paquetes__grid_c > div:nth-child(2) {
         grid-template-columns: 1fr;
     }
+    .paquetes_grid_d {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .paquetes_grid_d {
+        grid-template-columns: auto auto auto;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -792,6 +820,12 @@ header > .container > nav > ul > li > a:hover {
     }
 }
 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .paquetes_grid_d {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
     .servicios__grid_b {
         grid-template-columns: 1fr;
@@ -838,5 +872,11 @@ header > .container > nav > ul > li > a:hover {
     #inicio::after,
     #inicio::before {
         bottom: -50px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .paquetes_grid_d {
+        grid-template-columns: auto auto auto auto auto auto;
     }
 }

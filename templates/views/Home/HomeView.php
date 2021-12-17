@@ -444,7 +444,24 @@
                                 </div>
                             </div>
                         </div>
-                    </div>  
+                    </div>
+
+                    <div class="row paquetes_grid_d">
+                        <?php
+                        // Se muestran los canales 'incluidos' en el paquete dish junior
+                        for ($i = 0; $i < count($data); $i++)
+                        {
+                            if ($data[$i]["type"] == "incluidos")
+                            {
+                                echo "<div><img src='";
+                                echo IMAGES.$data[$i]["path"];
+                                echo "' alt='";
+                                echo $data[$i]["name"];
+                                echo "'></div>";
+                            }
+                        }
+                        ?>
+                    </div>
                 </div>
             </section>
 
