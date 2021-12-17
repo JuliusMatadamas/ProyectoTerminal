@@ -218,6 +218,7 @@ header > .container > nav > ul > li > a:hover {
 .paquetes__grid_b {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 20px;
 }
 
 .paquetes__grid_b > div:nth-child(1) {
@@ -381,6 +382,145 @@ header > .container > nav > ul > li > a:hover {
     justify-self: center;
 }
 
+.paquetes__grid_c {
+    background-color: #9bb95f;
+    color: #ffffff;
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.paquetes__grid_c > div:nth-child(1) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.paquetes__grid_c > div:nth-child(1) > div:nth-child(1) {
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.paquetes__grid_c > div:nth-child(1) > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.paquetes__grid_c > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
+    height: 100%;
+    padding: 5px 0;
+}
+
+.paquetes__grid_c > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+    align-items: center;
+    border-right: solid 1px #ffffff;
+    display: flex;
+    font-size: .7em;
+    height: 40%;
+    justify-content: center;
+}
+
+.paquetes__grid_c > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
+    align-items: center;
+    border-right: solid 1px #ffffff;
+    display: flex;
+    font-weight: bold;
+    height: 60%;
+    justify-content: center;
+}
+
+.paquetes__grid_c > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
+    height: 100%;
+    padding: 5px 0;
+}
+
+.paquetes__grid_c > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+    align-items: center;
+    display: flex;
+    font-size: .7em;
+    height: 40%;
+    justify-content: center;
+}
+
+.paquetes__grid_c > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    height: 60%;
+    justify-content: center;
+}
+
+.paquetes__grid_c > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.paquetes__grid_c > div:nth-child(2) > div:nth-child(1) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.paquetes__grid_c > div:nth-child(2) > div:nth-child(1) > span:nth-child(2) {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.paquetes__grid_c > div:nth-child(2) > div:nth-child(1) > span:nth-child(3) {
+    font-size: .9em;
+    font-weight: bold;
+}
+
+.paquetes__grid_c > div:nth-child(2) > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.paquetes__grid_c > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+    align-items: center;
+    display: flex;
+    font-size: .8em;
+    justify-content: center;
+    justify-self: center;
+    max-width: 67px;
+}
+
+.paquetes__grid_c > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
+    align-items: center;
+    display: flex;
+    font-size: 1.1em;
+    font-weight: bold;
+    justify-content: center;
+    justify-self: center;
+    max-width: 20px;
+}
+
+.paquetes__grid_c > div:nth-child(2) > div:nth-child(2) > div:nth-child(3) {
+    align-items: center;
+    display: flex;
+    font-size: 2.7em;
+    font-weight: bold;
+    justify-content: center;
+    justify-self: center;
+}
+
+.paquetes__grid_c > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    width: 120px;
+}
+.paquetes__grid_c > div:nth-child(2) > div:nth-child(2) > div:nth-child(4) > div {
+    font-size: .7em;
+    font-weight: bold;
+    padding: 0 10px;
+    width: 100%;
+}
+
 
 .paquetes__p1 {
     color: red;
@@ -540,6 +680,15 @@ header > .container > nav > ul > li > a:hover {
     ESTILOS SOBRE MEDIA QUERIES
     ===============================================================================================
 */
+@media screen and (max-width: 575px) {
+    .paquetes__grid_c > div:nth-child(1) {
+        grid-template-columns: 1fr;
+    }
+    .paquetes__grid_c > div:nth-child(2) {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media screen and (max-width: 767px) {
     header > .container > nav :checked ~ ul {
         bottom: 0;
@@ -679,6 +828,9 @@ header > .container > nav > ul > li > a:hover {
     .paquetes__grid_b > div:nth-child(2) {
         border-bottom-left-radius: 10px;
         border-top-right-radius: 0;
+    }
+    .paquetes__grid_c {
+        grid-template-columns: 1fr;
     }
 }
 

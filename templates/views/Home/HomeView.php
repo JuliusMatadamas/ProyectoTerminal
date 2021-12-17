@@ -394,6 +394,57 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="row paquetes__grid_c">
+                        <div>
+                            <div>
+                                DISH JUNIOR
+                            </div>
+                            <div>
+                                <div>
+                                    <div>
+                                        HASTA
+                                    </div>
+                                    <div>
+                                        41 CANALES
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        &nbsp;
+                                    </div>
+                                    <div>
+                                        10 AUDIO
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <span>$</span><span>177</span> <span>EN EFECTIVO</span>
+                            </div>
+                            <div>
+                                <div>
+                                    Por solo
+                                </div>
+                                <div>
+                                    $
+                                </div>
+                                <div>
+                                    167
+                                </div>
+                                <div>
+                                    <div>
+                                        al mes
+                                    </div>
+                                    <div>
+                                        cargo domiciliado
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
                 </div>
             </section>
 
