@@ -84,5 +84,11 @@ class Db
             $link->commit();
             return true;
         }
+
+        else
+        {
+            $link->rollBack();
+            throw new Exception("Revisar la consulta " + $sql );
+        }
     }
 }
