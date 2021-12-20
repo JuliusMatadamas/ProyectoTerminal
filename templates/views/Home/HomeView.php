@@ -395,10 +395,199 @@
                         </div>
                     </div>
 
-                    <div class="row paquetes__grid_c">
+                    <!-- PAQUETE DISH JUNIOR -->
+                    <div class="paquetes__bc-junior row paquetes__header">
+                        <div>
+                            DISH JUNIOR
+                        </div>
                         <div>
                             <div>
-                                DISH JUNIOR
+                                <div>
+                                    HASTA
+                                </div>
+                                <div>
+                                    41 CANALES
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    &nbsp;
+                                </div>
+                                <div>
+                                    10 AUDIO
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span>$</span>
+                            <span>177</span>
+                            &nbsp; EN EFECTIVO
+                        </div>
+                        <div>
+                            <div>
+                                <span>Por solo</span>
+                                &nbsp;
+                                <span>$</span>
+                                <span>167</span>
+                            </div>
+                            <div>
+                                <div>
+                                    al mes
+                                </div>
+                                <div>
+                                    cargo domiciliado
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="paquetes__canales-junior row">
+                        <?php
+                        for ($i = 0; $i < count($data); $i++)
+                        {
+                            if ( $data[$i]["type"] == "incluidos" )
+                            {
+                                echo "<div><img src='";
+                                echo IMAGES.$data[$i]["path"];
+                                echo "'></div>";
+                            }
+                        }
+                        ?>
+                    </div>
+
+                    <div class="paquetes__canales-abiertos row">
+                        <div>
+                            <?php
+                            for ($i = 0; $i < count($data); $i++)
+                            {
+                                if ( $data[$i]["type"] == "abierta" )
+                                {
+                                    echo "<div><img src='";
+                                    echo IMAGES.$data[$i]["path"];
+                                    echo "'></div>";
+                                }
+                            }
+                            ?>
+                        </div>
+
+                        <div>
+                            Canales sujetos a disponibilidad en cada localidad de conformidad con la normatividad aplicable, y de acuerdo a la tecnología del sistema digital.
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <!-- PAQUETE DISH BÁSICO -->
+                    <div class="paquetes__bc-basico row paquetes__header">
+                        <div>
+                            DISH BÁSICO
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    HASTA
+                                </div>
+                                <div>
+                                    74 CANALES
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    &nbsp;
+                                </div>
+                                <div>
+                                    10 AUDIO
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span>INCLUYE</span>
+                            <span>&nbsp;</span>
+                            <span>JUNIOR</span>
+                        </div>
+                        <div>
+                            <div>
+                                <span>Por solo</span>
+                                &nbsp;
+                                <span>$</span>
+                                <span>224</span>
+                            </div>
+                            <div>
+                                <div>
+                                    al mes
+                                </div>
+                                <div>
+                                    &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <!-- PAQUETE DISH HD -->
+                    <div class="paquetes__bc-hd row paquetes__header">
+                        <div>
+                            DISH HD
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    HASTA
+                                </div>
+                                <div>
+                                    121 CANALES
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    &nbsp;
+                                </div>
+                                <div>
+                                    10 AUDIO
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <span>$</span>
+                            <span>528</span>
+                            &nbsp; EN EFECTIVO
+                        </div>
+                        <div>
+                            <div>
+                                <span>Por solo</span>
+                                &nbsp;
+                                <span>$</span>
+                                <span>474</span>
+                            </div>
+                            <div>
+                                <div>
+                                    al mes
+                                </div>
+                                <div>
+                                    cargo domiciliado
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="paquetes__container-hd row">
+                        <div>
+                            <div>
+                                PAQUETES PREMIUN
+                            </div>
+
+                            <div>
+                                INCLUYEN BÁSICO
+                            </div>
+                        </div>
+
+                        <!-- PAQUETE DISH PREMIUN DOS -->
+                        <div class="paquetes__bc-pd row paquetes__header">
+                            <div>
+                                PREMIUN DOS
                             </div>
                             <div>
                                 <div>
@@ -406,7 +595,7 @@
                                         HASTA
                                     </div>
                                     <div>
-                                        41 CANALES
+                                        84 CANALES
                                     </div>
                                 </div>
                                 <div>
@@ -418,71 +607,60 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div>
                             <div>
-                                <span>$</span><span>177</span> <span>EN EFECTIVO</span>
                             </div>
                             <div>
                                 <div>
-                                    Por solo
-                                </div>
-                                <div>
-                                    $
-                                </div>
-                                <div>
-                                    167
+                                    <span>Por solo</span>
+                                    &nbsp;
+                                    <span>$</span>
+                                    <span>422</span>
                                 </div>
                                 <div>
                                     <div>
                                         al mes
                                     </div>
-                                    <div>
-                                        cargo domiciliado
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="row paquetes_grid_d">
-                        <div>
-                            <?php
-                            // Se muestran los canales 'incluidos' en el paquete dish junior
-                            for ($i = 0; $i < count($data); $i++)
-                            {
-                                if ($data[$i]["type"] == "incluidos")
-                                {
-                                    echo "<div><img src='";
-                                    echo IMAGES.$data[$i]["path"];
-                                    echo "' alt='";
-                                    echo $data[$i]["name"];
-                                    echo "'></div>";
-                                }
-                            }
-                            ?>
-                        </div>
-
-                        <div>
+                        <!-- PAQUETE DISH ALL ACCESS HD -->
+                        <div class="paquetes__bc-aah row paquetes__header">
                             <div>
-                                <?php
-                                // Se muestran los canales 'abiertos'
-                                for ($i = 0; $i < count($data); $i++)
-                                {
-                                    if ($data[$i]["type"] == "abierta")
-                                    {
-                                        echo "<div><img src='";
-                                        echo IMAGES.$data[$i]["path"];
-                                        echo "' alt='";
-                                        echo $data[$i]["name"];
-                                        echo "'></div>";
-                                    }
-                                }
-                                ?>
+                                ALL ACCESS HD
                             </div>
                             <div>
-                                Canales sujetos a disponibilidad en cada localidad de conformidad con la normatividad aplicable, y de acuerdo a la tecnología del sistema digital.
+                                <div>
+                                    <div>
+                                        HASTA
+                                    </div>
+                                    <div>
+                                        111 CANALES
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        &nbsp;
+                                    </div>
+                                    <div>
+                                        10 AUDIO
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                            </div>
+                            <div>
+                                <div>
+                                    <span>Por solo</span>
+                                    &nbsp;
+                                    <span>$</span>
+                                    <span>610</span>
+                                </div>
+                                <div>
+                                    <div>
+                                        al mes
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
