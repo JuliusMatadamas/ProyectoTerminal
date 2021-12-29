@@ -13,7 +13,7 @@ class HomeController
 
         try
         {
-            $sql = "SELECT name, path, type FROM canales WHERE paquete_id = 1 AND deleted_at IS NULL";
+            $sql = "SELECT `name`, `path`, `type`, `paquete_id` FROM `canales` WHERE `deleted_at` IS NULL";
             $res = Db::query($sql);
             $data = $res;
         }
