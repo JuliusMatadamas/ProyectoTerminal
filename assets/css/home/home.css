@@ -72,6 +72,59 @@ header > .container > nav > ul > li > a:hover {
     margin-top: 10px;
 }
 
+#dish_junior-canales {
+    border: solid 1px #ccc;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 5px;
+}
+
+#dish_junior-canales > div:nth-child(1) {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+#dish_junior-canales > div:nth-child(1) > div {
+    align-items: center;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    justify-self: center;
+    margin-bottom: 10px;
+    width: 50px;
+}
+
+#dish_junior-canales > div:nth-child(2) {
+    border: solid 3px #ccc;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 75fr 25fr;
+}
+
+#dish_junior-canales > div:nth-child(2) > div:nth-child(1) {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+#dish_junior-canales > div:nth-child(2) > div:nth-child(1) > div {
+    align-items: center;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    justify-self: center;
+    margin-bottom: 10px;
+    width: 50px;
+}
+
+#dish_junior-canales > div:nth-child(2) > div:nth-child(2) {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: .7em;
+    justify-content: center;
+    text-align: center;
+}
+
 #inicio {
     background-color: var(--main-color);
     height: 420px;
@@ -728,6 +781,15 @@ header > .container > nav > ul > li > a:hover {
     ===============================================================================================
 */
 @media screen and (max-width: 575px) {
+    #dish_junior-canales > div:nth-child(1) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #dish_junior-canales > div:nth-child(2) {
+        grid-template-columns: 1fr;
+    }
+    #dish_junior-canales > div:nth-child(2) > div:nth-child(1) {
+        grid-template-columns: repeat(4, 1fr);
+    }
     #paquetes_premiun > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) {
         height: 0;
     }
@@ -793,6 +855,15 @@ header > .container > nav > ul > li > a:hover {
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
+    #dish_junior-canales > div:nth-child(1) {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    #dish_junior-canales > div:nth-child(2) {
+        grid-template-columns: 1fr;
+    }
+    #dish_junior-canales > div:nth-child(2) > div:nth-child(1) {
+        grid-template-columns: repeat(6, 1fr);
+    }
     #paquetes_premiun > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) {
         height: 0;
     }
@@ -961,6 +1032,15 @@ header > .container > nav > ul > li > a:hover {
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+    #dish_junior-canales > div:nth-child(1) {
+        grid-template-columns: repeat(8, 1fr);
+    }
+    #dish_junior-canales > div:nth-child(2) {
+        grid-template-columns: 65fr 35fr;
+    }
+    #dish_junior-canales > div:nth-child(2) > div:nth-child(1) {
+        grid-template-columns: repeat(8, 1fr);
+    }
     .paquetes__header > div:nth-child(1) {
         height: auto;
         justify-content: center;
@@ -999,14 +1079,12 @@ header > .container > nav > ul > li > a:hover {
     .servicios__grid_b {
         grid-template-columns: 1fr;
     }
-
     .servicios__img {
         border-bottom-left-radius: 0;
         border-top-right-radius: 10px;
         justify-self: center;
         margin-bottom: 0;
     }
-
     .servicios__text {
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;

@@ -418,6 +418,46 @@
                         </div>
                     </div>
 
+                    <div id="dish_junior-canales" class="row">
+                        <div>
+                            <?php
+                            for ($i = 0; $i < count($data); $i++)
+                            {
+                                if ($data[$i]["paquete_id"] == 1)
+                                {
+                                    if ($data[$i]["type"] == "incluidos")
+                                    {
+                                        echo "<div><img src='";
+                                        echo IMAGES.$data[$i]["path"];
+                                        echo "'></div>";
+                                    }
+                                }
+                            }
+                            ?>
+                        </div>
+                        <div>
+                            <div>
+                                <?php
+                                for ($i = 0; $i < count($data); $i++)
+                                {
+                                    if ($data[$i]["paquete_id"] == 1)
+                                    {
+                                        if ($data[$i]["type"] == "abierta")
+                                        {
+                                            echo "<div><img src='";
+                                            echo IMAGES.$data[$i]["path"];
+                                            echo "'></div>";
+                                        }
+                                    }
+                                }
+                                ?>
+                            </div>
+                            <div>
+                                <p>Canales sujetos a disponibilidad en cada localidad de conformidad con la normatividad aplicable, y de acuerdo a la tecnología del sistema digital.</p>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- PAQUETE BÁSICO -->
                     <div id="basico" class="paquetes__header row">
                         <div>BÁSICO</div>
