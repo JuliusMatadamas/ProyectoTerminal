@@ -530,6 +530,37 @@
                             <div>cargo domiciliado</div>
                         </div>
                     </div>
+                    <div class="canales_hd-premiun row">
+                        <div>
+                            <div>INCLUYE</div>
+                            <div>MEMBRESÍA</div>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="<?php echo IMAGES; ?>/amazon_prime.png" alt="Amazon Prime">
+                            </div>
+                        </div>
+                        <div>
+                            <div>INCLUYE</div>
+                            <div>PLATAFORMAS</div>
+                            <div>DIGITALES</div>
+                        </div>
+                        <div>
+                            <div class="canal-noggin">
+                                <img src="<?php echo IMAGES; ?>/noggin.png" alt="Noggin">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="canal-paramount">
+                                <img src="<?php echo IMAGES; ?>/paramount_plus.png" alt="Paramount Plus">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="<?php echo IMAGES; ?>/dishmovil_dark.png" alt="Dish Móvil">
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- PAQUETES PREMIUN -->
                     <div id="paquetes_premiun" class="row">
@@ -562,6 +593,33 @@
                                     <div></div>
                                 </div>
                             </div>
+                            <div class="canales_hd-premiun row">
+                                <div>
+                                    <div>INCLUYE</div>
+                                    <div>10 CANALES</div>
+                                </div>
+                                <div>
+                                    <div class="canal-hbo">
+                                        <img src="<?php echo IMAGES; ?>/HBO.png" alt="HBO">
+                                    </div>
+                                </div>
+                                <div></div>
+                                <div>
+                                    <div>ACCESO A LA</div>
+                                    <div>PLATAFORMA</div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <img src="<?php echo IMAGES; ?>/HBO_max.png" alt="HBO Max">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <img src="<?php echo IMAGES; ?>/starzplay_logo.png" alt="Starz Play">
+                                    </div>
+                                </div>
+                            </div>
+
 
                             <div class="paquetes__header row">
                                 <div>ALL ACCESS HD</div>
@@ -584,6 +642,33 @@
                                     <div></div>
                                 </div>
                             </div>
+                            <div class="canales_hd-premiun row">
+                                <div>
+                                    <div>INCLUYE</div>
+                                </div>
+                                <div>
+                                    <div class="canales_hd-premiun-1">BÁSICO MÁS</div>
+                                </div>
+                                <div>
+                                    <div class="canales_hd-premiun-2">PREMIUN UNO</div>
+                                </div>
+                                <div>
+                                    <div  class="canales_hd-premiun-3">PREMIUN DOS</div>
+                                </div>
+                                <div>
+                                    <div>INCLUYE MEMBRESÍA</div>
+                                    <div>
+                                        <img src="<?php echo IMAGES; ?>/amazon_prime.png" alt="Amazon Prime">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>ACCESO A LA PLATAFORMA</div>
+                                    <div>
+                                        <img src="<?php echo IMAGES; ?>/HBO_max.png" alt="HBO Max">
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

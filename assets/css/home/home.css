@@ -258,9 +258,12 @@ header > .container > nav > ul > li > a:hover {
 
 #paquetes_premiun {
     background-color: #665a5c;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     color: #ffffff;
     margin-top: 10px;
-    padding: 5px;
+    overflow: hidden;
+    padding: 10px;
 }
 
 #paquetes_premiun > div:nth-child(1) {
@@ -291,6 +294,62 @@ header > .container > nav > ul > li > a:hover {
 
 #servicios {
     margin-bottom: 50px;
+}
+
+.canal-hbo img {
+    height: auto;
+    width: 55px;
+}
+
+.canal-noggin img {
+    height: auto;
+    width: 100px;
+}
+
+.canal-paramount img {
+    height: auto;
+    width: 100px;
+}
+
+.canales_hd-premiun {
+    background-color: #ffffff;
+    border: solid 1px #ccc;
+    color: #000000;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 10px;
+}
+
+.canales_hd-premiun > div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: .8em;
+    font-weight: bold;
+    padding: 10px;
+    justify-content: center;
+    justify-self: center;
+}
+
+.canales_hd-premiun-1 {
+    background-color: #cca055;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+
+.canales_hd-premiun-2 {
+    background-color: #8e6466;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+
+.canales_hd-premiun-3 {
+    background-color: #6f616f;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 5px 15px;
 }
 
 .icon-burger {
@@ -872,6 +931,9 @@ header > .container > nav > ul > li > a:hover {
     #paquetes_premiun > div:nth-child(2) > div:nth-child(2) > div:nth-child(6) {
         height: 0;
     }
+    .canales_hd-premiun {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .paquetes__header > div:nth-child(1) {
         height: auto;
         justify-content: center;
@@ -951,6 +1013,9 @@ header > .container > nav > ul > li > a:hover {
     }
     #paquetes_premiun > div:nth-child(2) > div:nth-child(2) > div:nth-child(6) {
         height: 0;
+    }
+    .canales_hd-premiun {
+        grid-template-columns: repeat(3, 1fr);
     }
     .paquetes__header > div:nth-child(1) {
         height: auto;
