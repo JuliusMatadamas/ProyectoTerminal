@@ -125,6 +125,63 @@ header > .container > nav > ul > li > a:hover {
     text-align: center;
 }
 
+#dish_basico-canales {
+    border: solid 1px #ccc;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+}
+
+#dish_basico-canales > div:nth-child(1) {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+#dish_basico-canales > div:nth-child(1) > div {
+    align-items: center;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    justify-self: center;
+    margin-bottom: 10px;
+    width: 50px;
+}
+
+#dish_basico-canales > div:nth-child(2) {
+    background-color: #f5f5f5;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: absolute;
+    margin-top: 5px;
+    max-width: 510px;
+    right: 0;
+    width: 100%;
+}
+
+#dish_basico-canales > div:nth-child(2) > div:nth-child(1) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#dish_basico-canales > div:nth-child(2) > div:nth-child(1) > img {
+    height: auto;
+    margin: 10px;
+    width: 140px;
+}
+
+#dish_basico-canales > div:nth-child(2) > div:nth-child(2) {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: .6em;
+    justify-content: center;
+    padding: 0 10px;
+    text-align: center;
+}
+
+
 #inicio {
     background-color: var(--main-color);
     height: 420px;
@@ -790,6 +847,12 @@ header > .container > nav > ul > li > a:hover {
     #dish_junior-canales > div:nth-child(2) > div:nth-child(1) {
         grid-template-columns: repeat(4, 1fr);
     }
+    #dish_basico-canales > div:nth-child(1) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #dish_basico-canales > div:nth-child(2) {
+        position: initial;
+    }
     #paquetes_premiun > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) {
         height: 0;
     }
@@ -863,6 +926,12 @@ header > .container > nav > ul > li > a:hover {
     }
     #dish_junior-canales > div:nth-child(2) > div:nth-child(1) {
         grid-template-columns: repeat(6, 1fr);
+    }
+    #dish_basico-canales > div:nth-child(1) {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    #dish_basico-canales > div:nth-child(2) {
+        position: initial;
     }
     #paquetes_premiun > div:nth-child(2) > div:nth-child(1) > div:nth-child(4) {
         height: 0;
@@ -1039,6 +1108,9 @@ header > .container > nav > ul > li > a:hover {
         grid-template-columns: 65fr 35fr;
     }
     #dish_junior-canales > div:nth-child(2) > div:nth-child(1) {
+        grid-template-columns: repeat(8, 1fr);
+    }
+    #dish_basico-canales > div:nth-child(1) {
         grid-template-columns: repeat(8, 1fr);
     }
     .paquetes__header > div:nth-child(1) {

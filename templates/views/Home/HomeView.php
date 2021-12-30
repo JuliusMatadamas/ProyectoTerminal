@@ -481,6 +481,33 @@
                         </div>
                     </div>
 
+                    <div id="dish_basico-canales" class="row">
+                        <div>
+                            <?php
+                            for ($i = 0; $i < count($data); $i++)
+                            {
+                                if ($data[$i]["paquete_id"] == 2)
+                                {
+                                    if ($data[$i]["type"] == "incluidos")
+                                    {
+                                        echo "<div><img src='";
+                                        echo IMAGES.$data[$i]["path"];
+                                        echo "'></div>";
+                                    }
+                                }
+                            }
+                            ?>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="<?php echo IMAGES; ?>/dishmovil_dark.png" alt="Dish Móvil">
+                            </div>
+                            <div>
+                                <p>MILES DE CONTENIDOS EN LÍNEA PARA VER DONDE QUIERAS Y CUANDO QUIERAS.</p>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- DISH HD -->
                     <div id="dish_hd" class="paquetes__header row">
                         <div>DISH HD</div>
