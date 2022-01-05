@@ -55,7 +55,7 @@
                         </div>
 
                         <div class="card-body">
-                            <form>
+                            <form id="form-mensaje" method="post" action="<?php echo URL; ?>mensaje">
                                 <div class="row">
                                     <div class="col-12">
                                         <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingresa tu nombre" value="">
@@ -82,7 +82,7 @@
 
                                 <div class="row">
                                     <div class="col-12">
-                                        <button class="btn btn-block btn-danger">Enviar</button>
+                                        <button type="submit" class="btn btn-block btn-danger">Enviar</button>
                                     </div>
                                 </div>
                             </form>
@@ -731,7 +731,7 @@
 
             <footer>
                 <div class="container">
-                    <div>&reg; 2022 Derechos reservados - Dish Matamoros</div>
+                    <div class="text-center">&reg; 2022 Derechos reservados - Dish Matamoros</div>
                     <div>
                         <ul>
                             <li>
