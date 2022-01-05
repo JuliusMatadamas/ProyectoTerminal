@@ -730,6 +730,33 @@
             </section>
 
             <footer>
+                <div class="container">
+                    <div>&reg; 2022 Derechos reservados - Dish Matamoros</div>
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="<?php echo IMAGES; ?>/facebook.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="<?php echo IMAGES; ?>/whatsapp.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="<?php echo IMAGES; ?>/twitter.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="<?php echo IMAGES; ?>/telegram.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </footer>
 
         </section>

@@ -1,3 +1,41 @@
+footer {
+    background: var(--main-color);
+    color: #ffffff;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+footer .container > div {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+footer .container > div:nth-child(1) {
+    order: 1;
+}
+
+footer .container > div:nth-child(2) {
+    order: 2;
+}
+
+footer .container > div > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+footer .container > div > ul > li > a > img {
+    width: 28px;
+}
+
+
 header {
     background: var(--main-color);
     height: 100px;
@@ -1112,6 +1150,19 @@ header > .container > nav > ul > li > a:hover {
 }
 
 @media screen and (max-width: 767px) {
+    footer .container {
+        grid-template-columns: 1fr;
+    }
+
+    footer .container > div:nth-child(1) {
+        margin-top: 20px;
+        order: 2;
+    }
+
+    footer .container > div:nth-child(2) {
+        order: 1;
+    }
+
     header > .container > nav :checked ~ ul {
         bottom: 0;
     }
