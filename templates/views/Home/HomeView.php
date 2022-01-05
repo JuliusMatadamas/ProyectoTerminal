@@ -674,11 +674,59 @@
                 </div>
             </section>
 
-            <hr>
+            <br>
 
             <section id="contacto">
-                <h1>Contacto</h1>
-                <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi autem, facilis fuga illum nesciunt tempora! Alias dignissimos, eaque eum eveniet hic labore laborum magni odio quae quibusdam, quo repellendus sit.</span><span>Cum dolorem doloribus earum incidunt ipsum, laboriosam, libero molestias nisi porro provident repellat sequi vel voluptas. Ab aliquid amet inventore iure maxime minus odio, placeat quaerat repellat sed voluptatibus voluptatum.</span><span>Ab blanditiis cum dignissimos eos esse excepturi ipsam molestias numquam, placeat, quis quos ut veniam. Ad commodi dicta earum esse, facere fugit harum illum magni maiores odio officiis, unde veniam?</span><span>Adipisci deserunt dolorem doloribus provident quia tempora tenetur. Accusamus aliquid, aperiam autem cum dignissimos eaque ex illum libero magnam maxime molestias nemo nulla pariatur, placeat provident, quis tempora vel voluptatibus.</span><span>Ab aliquam, amet cum distinctio dolor dolores eaque eveniet facere facilis fuga illo incidunt itaque iure libero magnam minus non odio, quaerat quibusdam recusandae repudiandae, totam ullam vitae voluptates voluptatibus.</span></p>
+                <div class="container">
+                    <div class="row">
+                        <h1 class="text-center">Contactanos</h1>
+                        <h6 class="text-center">Puedes utilizar cualquiera de las siguientes formas para comunicarte con nosotros y poder darte más información y/o atender tus dudas respecto a los servicios que brindamos.</h6>
+                    </div>
+
+                    <div class="row">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <div id="map" class="map"></div>
+                            </div>
+                        </div>
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <div>
+                                    <div>
+                                        <img src="<?php echo IMAGES; ?>/direccion.png">
+                                    </div>
+                                    <div>Calle Tercera #6, Zona Centro, Heroica Matamoros, Tamaulipas, CP 87300</div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <img src="<?php echo IMAGES; ?>/telefono.png">
+                                    </div>
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <a href="">8689070479</a>
+                                            </li>
+                                            <li>
+                                                <a href="">8688289341</a>
+                                            </li>
+                                            <li>
+                                                <a href="">8682062028</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <img src="<?php echo IMAGES; ?>/email.png">
+                                    </div>
+                                    <div>
+                                        <a href="">info@dish-matamoros.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <footer>

@@ -56,6 +56,42 @@ header > .container > nav > ul > li > a:hover {
     margin-top: 10px;
 }
 
+#contacto > .container > div:nth-child(2) {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 60fr 40fr;
+    margin-top: 20px;
+}
+
+#contacto > .container > div:nth-child(2) > div {
+    height: auto;
+    min-height: 300px;
+}
+
+#contacto > .container > div:nth-child(2) > div:nth-child(2) > div > div {
+    display: grid;
+    grid-template-columns: 40fr 60fr;
+}
+
+#contacto > .container > div:nth-child(2) > div:nth-child(2) > div > div > div:nth-child(1) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#contacto > .container > div:nth-child(2) > div:nth-child(2) > div > div > div:nth-child(1) img {
+    height: auto;
+    max-width: 92px;
+    width: 100%;
+}
+
+#contacto > .container > div:nth-child(2) > div:nth-child(2) > div > div > div:nth-child(2) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 #content {
     position: relative;
     margin-top: 100px;
@@ -367,6 +403,13 @@ header > .container > nav > ul > li > a:hover {
     margin: 5px;
     transition: all .3s ease-in-out;
     width: 30px;
+}
+
+.map {
+    border: solid 1px #f5f5f5;
+    border-radius: 10px;
+    height: 300px;
+    width: 100%;
 }
 
 .paquetes__d1 {
@@ -897,6 +940,9 @@ header > .container > nav > ul > li > a:hover {
     ===============================================================================================
 */
 @media screen and (max-width: 575px) {
+    #contacto > .container > div:nth-child(2) {
+        grid-template-columns: 1fr;
+    }
     #dish_junior-canales > div:nth-child(1) {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -980,6 +1026,9 @@ header > .container > nav > ul > li > a:hover {
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
+    #contacto > .container > div:nth-child(2) {
+        grid-template-columns: 1fr;
+    }
     #dish_junior-canales > div:nth-child(1) {
         grid-template-columns: repeat(6, 1fr);
     }

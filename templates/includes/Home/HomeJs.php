@@ -1,2 +1,2 @@
 <script src="<?php echo JS; ?>/home/home.js" type="text/javascript"></script>
-    <script></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCivYQ4LhOSqyr6L6jdKwa8K3DKIIYbdcM&callback=initMap&libraries=&v=weekly" async></script>
