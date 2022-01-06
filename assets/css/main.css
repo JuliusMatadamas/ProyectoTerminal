@@ -1,6 +1,7 @@
 @import url('variables.css');
 @import url('html.css');
 @import url('classes.css');
+@import url('keyframes.css');
 @import url('media-queries.css');
 
 @font-face {

@@ -49,29 +49,25 @@ formMensaje.addEventListener('submit', (e) => {
     // Se evaluan los campos del formulario
     if (!evalText(nombre.value.trim(), 10))
     {
-        nombre.focus();
-        alert('El nombre debe ser llenado cuando menos con 10 carácteres.');
+        modalOpen('¡Atención!', 'El campo nombre debe tener 10 carácteres por lo menos.', true, 'ENTENDIDO', false, '');
         return;
     }
 
     if (!evalText(telefono.value.trim(), 10))
     {
-        telefono.focus();
-        alert('El número de teléfono debe tener 10 dígitos.');
+        modalOpen('¡Atención!', 'El número de teléfono debe tener 10 dígitos.', true, 'ENTENDIDO', false, '');
         return;
     }
 
     if (!evalEmail(email.value.trim()))
     {
-        email.focus();
-        alert('Ingrese una dirección válida de correo electrónico.');
+        modalOpen('¡Atención!', 'Ingrese una dirección válida de correo electrónico..', true, 'ENTENDIDO', false, '');
         return;
     }
 
     if (!evalText(mensaje.value.trim(), 10))
     {
-        mensaje.focus();
-        alert('Su mensaje debe tener 10 carácteres por lo menos.');
+        modalOpen('¡Atención!', 'El mensaje debe tener 10 carácteres por lo menos.', true, 'ENTENDIDO', false, '');
         return;
     }
 
@@ -84,17 +80,24 @@ formMensaje.addEventListener('submit', (e) => {
     formData.append('mensaje', mensaje.value);
 
     httpRequest.onreadystatechange = function(){
-        if ( this.readyState == 4 && this.status == 200 ) {
-            nombre.value = '';
-            telefono.value = '';
-            email.value = '';
-            mensaje.value = '';
-            alert("El mensaje fue enviado, a la brevedad nos comunicaremos con usted.");
-            console.log(this.responseText);
+        if ( this.readyState === 4 )
+        {
+            if ( this.status === 200 )
+            {
+                console.log(this.responseText);
+                nombre.value = '';
+                telefono.value = '';
+                email.value = '';
+                mensaje.value = '';
+            }
+            else
+            {
+                console.log("Error: ", this.statusText);
+            }
         }
-    };
+    }
 
-    httpRequest.open('POST', formMensaje.getAttribute('action'));
+    httpRequest.open('POST', formMensaje.getAttribute('action'), true);
     httpRequest.send(formData);
 });
 
