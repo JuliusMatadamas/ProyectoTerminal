@@ -84,20 +84,26 @@ formMensaje.addEventListener('submit', (e) => {
         {
             if ( this.status === 200 )
             {
-                console.log(this.responseText);
                 nombre.value = '';
                 telefono.value = '';
                 email.value = '';
                 mensaje.value = '';
+                modalOpen('Mensaje enviado', 'A la brevedad nos comunicaremos con usted.', true, 'CERRAR', false, '');
             }
             else
             {
+                let response = JSON.parse(this.responseText);
+                let m = response.msg;
+                modalOpen('Mensaje del servidor', m, true, 'CONTINUAR', false, '');
                 console.log("Error: ", this.statusText);
             }
         }
     }
 
     httpRequest.open('POST', formMensaje.getAttribute('action'), true);
+    httpRequest.onerror = () => {
+        console.log("Ocurrió un error durante la transacción.");
+    };
     httpRequest.send(formData);
 });
 
