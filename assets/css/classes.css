@@ -101,6 +101,41 @@
     color: #f8f9fa;
 }
 
+.btn-primary {
+    color: #fff;
+    background-color: var(--main-color);
+    border-color: #b30126;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #f00038;
+    border-color: #cf0031;
+}
+
+.btn-primary:focus {
+    color: #fff;
+    background-color: #cf0e3b;
+    border-color: #c1002d;
+    box-shadow: 0 0 0 0.2rem rgba(88, 0, 20, 0.5);
+}
+
+.btn-primary:disabled {
+    color: #fff;
+    background-color: #f01347;
+    border-color: #f00038;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color: #cb1942;
+    border-color: #cb0131;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(88, 0, 24, 0.5);
+}
+
 .btn-secondary {
     color: #fff;
     background-color: #6c757d;

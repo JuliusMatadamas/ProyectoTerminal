@@ -1,0 +1,51 @@
+.feedback {
+    font-size: .6em;
+    height: 34px;
+    padding: 4px 0;
+}
+
+.invalid {
+    color: #d80033;
+}
+
+.login__container {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    overflow: auto;
+    scrollbar-color: #c80029 #ee0031;
+    scrollbar-width: thin;
+    width: 100%;
+}
+
+.login__container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.login__container::-webkit-scrollbar-thumb {
+    background-color: #c80029;
+    border-radius: 5px;
+    border: 1px solid #ee0031;
+}
+
+.login__container::-webkit-scrollbar-track {
+    background: #ee0031;
+}
+
+.login__container > .card {
+    max-width: 420px;
+    width: 70%;
+}
+
+.login__container > .card > .card-header {
+    text-align: center;
+}
+
+.login__container > .card > .card-header > img {
+    max-width: 150px;
+}
+
+.valid {
+    color: darkgreen;
+}
