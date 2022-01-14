@@ -1,0 +1,53 @@
+.work-section{
+    height: 100vh;
+    left: 260px;
+    position: relative;
+    transition: all 0.5s ease;
+    width: calc(100% - 260px);
+}
+
+.work-section .work-body{
+    background: #E4E9F7;
+    height: calc(100vh - 60px);
+    overflow: auto;
+    position: fixed;
+    scrollbar-color: #c80029 rgba(0, 0, 0, .2);
+    scrollbar-width: thin;
+    top: 60px;
+    width: 100%;
+}
+
+.work-section .work-body::-webkit-scrollbar {
+    width: 12px;
+}
+
+.work-section .work-body::-webkit-scrollbar-thumb {
+    background-color: #c80029;
+    border-radius: 5px;
+    border: 1px solid #ee0031;
+}
+
+.work-section .work-body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, .2);
+}
+
+.work-section .work-header{
+    align-items: center;
+    background: #E4E9F7;
+    border-bottom: solid 1px #f5f5f5;
+    display: flex;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.work-section .work-header i {
+    cursor: pointer;
+    margin: 10px 30px;
+}
+
+.work-section .work-header .text{
+    font-size: 1.6em;
+    font-weight: 600;
+}
