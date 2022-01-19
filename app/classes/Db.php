@@ -90,5 +90,7 @@ class Db
             $link->rollBack();
             throw new Exception("Revisar la consulta " + $sql );
         }
+
+        $db = null;
     }
 }

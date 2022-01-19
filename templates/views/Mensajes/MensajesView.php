@@ -1,12 +1,12 @@
 <?php require INCLUDES.'header.php'; ?>
     <!-- sidebar -->
-    <?php require INCLUDES.'sidebar.php'; ?>
+<?php require INCLUDES.'sidebar.php'; ?>
 
     <!-- área de trabajo -->
     <section class="close work-section">
         <div class="work-header">
             <i class='fas fa-bars fa-2x' ></i>
-            <span class="text">Inicio - Sistema de gestión</span>
+            <span class="text">Mensajes</span>
         </div>
 
         <div class="work-body">

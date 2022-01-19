@@ -233,10 +233,17 @@
     padding: 10px;
 }
 
+.sidebar .profile-details .profile_name {
+    font-size: .8em;
+}
+
+.sidebar .profile-details .job {
+    font-size: .5em;
+}
+
 .sidebar .profile-details .profile_name,
 .sidebar .profile-details .job{
     color: #fff;
-    font-size: 18px;
     font-weight: 500;
     white-space: nowrap;
 }

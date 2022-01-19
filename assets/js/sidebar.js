@@ -1,5 +1,6 @@
 let arrow = document.querySelectorAll(".arrow");
 let sidebar = document.querySelector(".sidebar");
+let workSection = document.querySelector(".work-section");
 let sidebarBtn = document.querySelector(".work-header .fa-bars");
 let btnLogOut = document.querySelector(".profile-details .fa-sign-in-alt");
 let inputValue = document.querySelector(".profile-details input").value;
@@ -14,6 +15,7 @@ for (var i = 0; i < arrow.length; i++)
 
 sidebarBtn.addEventListener("click", (e) => {
     sidebar.classList.toggle("close");
+    workSection.classList.toggle("close");
 });
 
 btnLogOut.addEventListener("click", (e) => {

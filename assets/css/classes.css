@@ -373,3 +373,56 @@
 .text-center {
     text-align: center;
 }
+
+.work-body{
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+    overflow: auto;
+    scrollbar-color: #c80029 rgba(0, 0, 0, .2);
+    scrollbar-width: thin;
+    text-align: justify;
+    top: 60px;
+}
+
+.work-body::-webkit-scrollbar {
+    width: 12px;
+}
+
+.work-body::-webkit-scrollbar-thumb {
+    background-color: #c80029;
+    border-radius: 5px;
+    border: 1px solid #ee0031;
+}
+
+.work-body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, .2);
+}
+
+.work-header{
+    align-items: center;
+    border-bottom: solid 1px #f5f5f5;
+    display: flex;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.work-header i {
+    cursor: pointer;
+    margin: 10px 30px;
+}
+
+.work-header .text{
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.work-section {
+    height: 100vh;
+    left: 260px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease;
+    width: calc(100% - 260px);
+}

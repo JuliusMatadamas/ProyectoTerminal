@@ -61,6 +61,51 @@ class AuthController
                         unset($res[$i]["password"]);
                         $_SESSION["login"] = true;
                         $_SESSION["info"] = $res[$i];
+
+                        // Se obtienen los permisos del usuario
+                        $permisos = [];
+                        $idUsuario = $_SESSION["info"]["id"];
+                        $sql2 = "SELECT DISTINCT modulos.id AS 'id_modulo', modulos.nombre AS 'modulo', modulos.icon AS 'icon' FROM permisos INNER JOIN submodulos ON permisos.submodulo_id = submodulos.id INNER JOIN modulos ON submodulos.modulo_id = modulos.id WHERE permisos.deleted_at IS NULL AND submodulos.deleted_at IS NULL AND modulos.deleted_at IS NULL AND permisos.usuario_id = $idUsuario ";
+
+                        $data2 = Db::query($sql2);
+
+                        $sql3 = "SELECT DISTINCT submodulos.id AS 'id_submodulo', submodulos.nombre AS 'submodulo', submodulos.href, modulos.id AS 'id_modulo' FROM permisos INNER JOIN submodulos ON permisos.submodulo_id = submodulos.id INNER JOIN modulos ON submodulos.modulo_id = modulos.id WHERE permisos.deleted_at IS NULL AND submodulos.deleted_at IS NULL AND permisos.usuario_id = $idUsuario";
+
+                        $data3 = Db::query($sql3);
+
+                        for ($i = 0; $i < count($data2); $i++)
+                        {
+                            $permisos[$i]["id_modulo"] = $data2[$i]["id_modulo"];
+                            $permisos[$i]["modulo"] = $data2[$i]["modulo"];
+                            $permisos[$i]["icon"] = $data2[$i]["icon"];
+                            $permisos[$i]["submodulos"] = [];
+
+                            for ($j = 0; $j < count($data3); $j++)
+                            {
+                                if ($data3[$j]["id_modulo"] === $data2[$i]["id_modulo"])
+                                {
+                                    $index = 0;
+                                    if ( count($permisos[$i]["submodulos"]) == 0 )
+                                    {
+                                        $index = 0;
+                                    }
+                                    elseif ( count($permisos[$i]["submodulos"]) == 1 )
+                                    {
+                                        $index = 1;
+                                    }
+                                    else
+                                    {
+                                        $index = count($permisos[$i]["submodulos"]);
+                                    }
+                                    $permisos[$i]["submodulos"][$index]["id_submodulo"] = $data3[$j]["id_submodulo"];
+                                    $permisos[$i]["submodulos"][$index]["submodulo"] = $data3[$j]["submodulo"];
+                                    $permisos[$i]["submodulos"][$index]["href"] = $data3[$j]["href"];
+                                }
+                            }
+                        }
+
+                        $_SESSION["permisos"] = $permisos;
+
                         $valid = true;
                         break;
                     }
