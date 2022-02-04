@@ -79,7 +79,7 @@ class Db
         }
 
         // Si la consulta inicia con un update, se valida que se esté pasando la condición where
-        elseif ( stripos(trim(sql), 'update ') === 0 and stripos(trim($sql), ' where ') !== false )
+        elseif ( stripos(trim($sql), 'update ') === 0 and stripos(trim($sql), ' where ') !== false )
         {
             $link->commit();
             return true;

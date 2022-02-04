@@ -94,10 +94,10 @@ class MensajeController
                 exit;
             }
 
-            $nombre = htmlentities($_POST["nombre"], ENT_QUOTES, 'UTF-8');
-            $telefono = htmlentities($_POST["telefono"], ENT_QUOTES, 'UTF-8');
-            $email = htmlentities($_POST["email"], ENT_QUOTES, 'UTF-8');
-            $mensaje = htmlentities($_POST["mensaje"], ENT_QUOTES, 'UTF-8');
+            $nombre = $_POST["nombre"];
+            $telefono = $_POST["telefono"];
+            $email = $_POST["email"];
+            $mensaje = $_POST["mensaje"];
 
             $sql = "INSERT INTO `mensajes` (`id`, `nombre`, `telefono`, `email`, `mensaje`, `leido`, `created_at`, `deleted_at`, `updated_at`) VALUES (NULL, '$nombre', '$telefono', '$email', '$mensaje', '0', NOW(), NULL, CURRENT_TIMESTAMP)";
 

@@ -16,7 +16,7 @@ function to_object($array)
  * @param $route [string][la ruta del submodulo a validar]
  * @return bool
  */
-function has_permission($id, $route)
+function has_permission($idModule, $routeSubModule)
 {
     $authmodule = false;
 
@@ -24,11 +24,11 @@ function has_permission($id, $route)
 
     for ($i = 0; $i < count($permisos); $i++)
     {
-        if ($permisos[$i]["id_modulo"] == $id)
+        if ($permisos[$i]["id_modulo"] == $idModule)
         {
             for ($j = 0; $j < count($permisos[$i]["submodulos"]); $j++)
             {
-                if ($permisos[$i]["submodulos"][$j]["href"] === $route)
+                if ($permisos[$i]["submodulos"][$j]["href"] === $routeSubModule)
                 {
                     $authmodule = true;
                     break;

@@ -377,6 +377,7 @@
 .work-body{
     height: calc(100vh - 60px);
     margin-top: 60px;
+    padding: 40px;
     overflow: auto;
     scrollbar-color: #c80029 rgba(0, 0, 0, .2);
     scrollbar-width: thin;
