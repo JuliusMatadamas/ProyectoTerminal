@@ -197,7 +197,11 @@ class App
         $controller = new $current_controller;
 
         // Se obtienen los parámetros
-        $params = array_values(empty($this->uri) ? [] : $this->uri);
+        // $params = array_values(empty($this->uri) ? [] : $this->uri);
+        if (isset($this->uri[2]))
+        {
+            $params = $this->uri[2];
+        }
 
         // Se llama al método
         if ( empty($params) )
@@ -208,7 +212,7 @@ class App
         else
         {
             // Se ejecuta la función call_user_func_array cuando se está pasando parámetros
-            call_user_func_array([$controller, $current_method], $params);
+            call_user_func_array([$controller, $current_method], array(&$params));
         }
 
         return;

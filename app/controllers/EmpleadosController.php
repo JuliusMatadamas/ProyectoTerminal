@@ -1,0 +1,131 @@
+<?php
+
+
+class EmpleadosController
+{
+    function __construct()
+    {
+        // Se comprueba si el usuario está logueado
+        if (!isset($_SESSION["login"]) || empty($_SESSION["login"]))
+        {
+            // En caso de no estar logueado, se le redirige al login
+            Redirect::to('login');
+        }
+    }
+
+    /**
+     * Función para mostrar el formulario de registro de un nuevo empleado
+     */
+    public function index()
+    {
+        // Se valida que el usuario tenga autorizado el submodulo
+        if (!has_permission(3, "empleados/nuevo"))
+        {
+            Redirect::to('admin');
+        }
+
+        $data = [];
+
+        View::render('Empleados', $data);
+    }
+
+    /**
+     * Función para mostrar el formulario de registro de un nuevo empleado
+     */
+    public function nuevo()
+    {
+        // Se valida que el usuario tenga autorizado el submodulo
+        if (!has_permission(3, "empleados/nuevo"))
+        {
+            Redirect::to('admin');
+        }
+
+        $data = [];
+
+        View::render('Empleados', $data);
+    }
+
+    /**
+     * Función para registrar en la base de datos
+     * la información del formulario de registro de nuevos empleados
+     */
+    public function store()
+    {
+        $method = $_SERVER['REQUEST_METHOD'];
+
+        if ($method == "POST")
+        {
+            try {
+                $nombre = trim($_POST["nombre"]);
+                $apellido_paterno = trim($_POST["apellido_paterno"]);
+                $apellido_materno = trim($_POST["apellido_materno"]);
+                $fecha_nacimiento = trim($_POST["fecha_nacimiento"]);
+                $sexo = trim($_POST["sexo"]);
+                $domicilio = trim($_POST["domicilio"]);
+                $asentamiento_id = trim($_POST["asentamiento_id"]);
+                $email = trim($_POST["email"]);
+                $telefono = trim($_POST["telefono"]);
+                $sql = "INSERT INTO empleados (nombre, apellido_paterno, apellido_materno, fecha_nacimiento, sexo, domicilio, asentamiento_id, email, telefono, created_at, deleted_at, updated_at) VALUES ('$nombre', '$apellido_paterno', '$apellido_materno', '$fecha_nacimiento', '$sexo', '$domicilio', $asentamiento_id, '$email', '$telefono', NOW(), NULL, NOW())";
+
+                $id = Db::query($sql);
+
+                $response = (object)['msg' => 'El empleado ha sido registrado en la base de datos con el id: '.$id];
+                echo json_encode($response);
+                exit;
+            }
+            catch(Exception $e)
+            {
+                json_output(json_build(400, null, $e->getMessage()));
+            }
+        }
+        else
+        {
+            json_output(json_build(403));
+        }
+    }
+
+    /**
+     * Función para mostrar la vista con la información de todos los empleados
+     * activos registrados en la base de datos.
+     */
+    public function consulta()
+    {
+        // Se valida que el usuario tenga autorizado el submodulo
+        if (!has_permission(3, "empleados/consulta"))
+        {
+            Redirect::to('admin');
+        }
+
+        $sql = "SELECT empleados.id, empleados.nombre, empleados.apellido_paterno, empleados.apellido_materno, empleados.fecha_nacimiento, empleados.sexo, codigos_postales.codigo_postal, estados.nombre AS 'estado', municipios.nombre AS 'municipio', empleados.asentamiento_id, empleados.domicilio, empleados.email, empleados.telefono FROM empleados INNER JOIN asentamientos ON empleados.asentamiento_id = asentamientos.id INNER JOIN codigos_postales ON asentamientos.codigo_postal_id = codigos_postales.id INNER JOIN municipios ON codigos_postales.municipio_id = municipios.id INNER JOIN estados ON municipios.estado_id = estados.id WHERE empleados.id = 1 AND empleados.deleted_at IS NULL";
+
+        $data = Db::query($sql);
+
+        View::render('EmpleadosConsulta', $data);
+    }
+
+    /**
+     * Función para mostrar el formulario llenado con la información
+     * correspondiente al id del empleado para editarla
+     * @param int $id
+     */
+    public function editar($id = 0)
+    {
+        if ($id == 0)
+        {
+            Redirect::to('empleados/nuevo');
+        }
+        else
+        {
+            $sql = "SELECT empleados.id, empleados.nombre, empleados.apellido_paterno, empleados.apellido_materno, empleados.fecha_nacimiento, empleados.sexo, codigos_postales.codigo_postal, estados.nombre AS 'estado', municipios.nombre AS 'municipio', empleados.asentamiento_id, empleados.domicilio, empleados.email, empleados.telefono FROM empleados INNER JOIN asentamientos ON empleados.asentamiento_id = asentamientos.id INNER JOIN codigos_postales ON asentamientos.codigo_postal_id = codigos_postales.id INNER JOIN municipios ON codigos_postales.municipio_id = municipios.id INNER JOIN estados ON municipios.estado_id = estados.id WHERE empleados.id = $id AND empleados.deleted_at IS NULL";
+
+            $data = Db::query($sql);
+
+            if (!isset($data[0]))
+            {
+                $data = '';
+            }
+
+            View::render('EmpleadosEditar', $data);
+        }
+    }
+}

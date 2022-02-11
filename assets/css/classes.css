@@ -208,6 +208,12 @@
     width: 100%;
 }
 
+.feedback {
+    font-size: .7em;
+    height: 34px;
+    overflow: hidden;
+}
+
 .form-control {
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
@@ -298,6 +304,15 @@
     display: grid;
 }
 
+input:invalid:focus, input.invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.invalid {
+    border-color: #dc3545;
+}
+
 .modal {
     align-items: center;
     animation-duration: 1s;
@@ -372,6 +387,10 @@
 
 .text-center {
     text-align: center;
+}
+
+.text-danger {
+    color: #c80029;
 }
 
 .work-body{
