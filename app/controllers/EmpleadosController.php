@@ -55,28 +55,48 @@ class EmpleadosController
 
         if ($method == "POST")
         {
-            try {
-                $nombre = trim($_POST["nombre"]);
-                $apellido_paterno = trim($_POST["apellido_paterno"]);
-                $apellido_materno = trim($_POST["apellido_materno"]);
-                $fecha_nacimiento = trim($_POST["fecha_nacimiento"]);
-                $sexo = trim($_POST["sexo"]);
-                $domicilio = trim($_POST["domicilio"]);
-                $asentamiento_id = trim($_POST["asentamiento_id"]);
-                $email = trim($_POST["email"]);
-                $telefono = trim($_POST["telefono"]);
-                $sql = "INSERT INTO empleados (nombre, apellido_paterno, apellido_materno, fecha_nacimiento, sexo, domicilio, asentamiento_id, email, telefono, created_at, deleted_at, updated_at) VALUES ('$nombre', '$apellido_paterno', '$apellido_materno', '$fecha_nacimiento', '$sexo', '$domicilio', $asentamiento_id, '$email', '$telefono', NOW(), NULL, NOW())";
+            // Se crea una nueva instancia de la clase 'Empleado'
+            $empleado = new Empleado();
 
-                $id = Db::query($sql);
+            // Se asignan los valores a las propiedades de la clase
+            $empleado::setNombre(trim($_POST["nombre"]));
+            $empleado::setApellidoPaterno(trim($_POST["apellido_paterno"]));
+            $empleado::setApellidoMaterno(trim($_POST["apellido_materno"]));
+            $empleado::setFechaNacimiento($_POST["fecha_nacimiento"]);
+            $empleado::setSexo($_POST["sexo"]);
+            $empleado::setDomicilio(trim($_POST["domicilio"]));
+            $empleado::setAsentamientoId($_POST["asentamiento_id"]);
+            $empleado::setEmail(trim($_POST["email"]));
+            $empleado::setTelefono(trim($_POST["telefono"]));
 
-                $response = (object)['msg' => 'El empleado ha sido registrado en la base de datos con el id: '.$id];
+            // Se valida que los datos estén correctos
+            $resp = $empleado->validate();
+
+            // Si alguno de los datos no cumple con los requerimientos
+            if (!$resp["resultado"])
+            {
+                http_response_code(500);
+                $response = (object)['msg' => $resp["mensaje"]];
                 echo json_encode($response);
                 exit;
             }
-            catch(Exception $e)
+
+            // Se crea la variable que guardará el id asignado al empleado
+            $id = $empleado->create();
+
+            // Si no se pudo guardar al empleado
+            if(!$id)
             {
-                json_output(json_build(400, null, $e->getMessage()));
+                http_response_code(500);
+                $response = (object)['msg' => 'El empleado no pudo ser guardado, verifique los datos o póngase en contacto con el administrador si el error persiste.'];
+                echo json_encode($response);
+                exit;
             }
+
+            // Si el empleado fue guardado correctamente
+            $response = (object)['msg' => 'El empleado ha sido registrado en la base de datos con el id: '.$id];
+            echo json_encode($response);
+            exit;
         }
         else
         {

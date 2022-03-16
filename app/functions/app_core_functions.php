@@ -41,6 +41,31 @@ function has_permission($idModule, $routeSubModule)
 }
 
 /**
+ * Función para obtener la diferencia de dias entre dos fecha
+ * @param $fechaIni - La fecha más reciente
+ * @param $fechaFin - La fecha menos reciente
+ * @return false|float
+ */
+function diasTranscurridos($fechaIni, $fechaFin)
+{
+    $dias = (strtotime($fechaIni)-strtotime($fechaFin))/86400;
+    $dias = abs($dias);
+    $dias = floor($dias);
+    return $dias;
+}
+
+/**
+ * Función para validar que la cadena pasada como parametro contenga sólo letras y espacios
+ * @param $text
+ * @return false|int
+ */
+function soloLetrasConEspacios($text)
+{
+    $pattern = "/^[a-zA-Z\sáéíóúüñÁÉÍÓÚÜÑ]+$/";
+    return preg_match($pattern, $text);
+}
+
+/**
  * Función que muestra el mensaje en el navegador en formato json
  * @param $json
  * @param bool $die

@@ -341,7 +341,7 @@ function evalForm(e, f)
         }
     }
 
-    formSubmit.disabled = true;
+    // formSubmit.disabled = true;
     let request = new XMLHttpRequest();
     let formData = new FormData();
 
@@ -385,6 +385,10 @@ function evalForm(e, f)
                 email.value = '';
                 telefono.value = '';
                 formSubmit.disabled = false;
+            }
+            else
+            {
+                modalOpen('Respuesta del servidor', JSON.parse(this.responseText)["msg"], true, 'CERRAR', false, '');
             }
         }
     }
